@@ -67,7 +67,7 @@ export default function StyleShowcase() {
 
   return (
     <main className="p-4 sm:p-6 md:px-16 space-y-12 md:space-y-16">
-      <div className="py-10 md:py-0 md:min-h-screen flex flex-col justify-center md:justify-around">
+      <div className="pt-10 md:py-0 md:min-h-screen flex flex-col justify-center md:justify-around">
         <header className="pb-5 w-full flex flex-row justify-between items-center">
           <img src="/logo.svg" alt="Logo" className="size-20" />
 
@@ -91,13 +91,13 @@ export default function StyleShowcase() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-zinc-200 text-base sm:text-lg ">
           <a
-            className="bg-white rounded-full px-4 py-2 sm:px-6 sm:py-3 font-medium h-fit max-w-full md:order-last text-black text-center"
+            className="bg-white rounded-full px-4 py-2 sm:px-6 sm:py-3 font-medium h-fit max-w-full md:order-last text-black text-center hidden md:block"
             href="#switch"
           >
             Let&apos;s Build!
           </a>
 
-          <p className="md:col-span-1 md:order-first">
+          <p className="md:col-span-1 md:order-first hidden md:block">
             Typography is the art and craft of arranging type to make written
             language not just legible, but also visually engaging. It&apos;s one
             of the core pillars of design, whether you&apos;re building a
@@ -114,7 +114,7 @@ export default function StyleShowcase() {
       <hr className="opacity-30 border-zinc-800 hidden md:block" />
 
       <div
-        className="w-full flex flex-row  justify-between items-start gap-4 max-w-full px-2 sm:px-4 md:px-10"
+        className="w-full flex flex-row  justify-between items-start gap-4 max-w-full sm:px-4 md:px-10"
         id="switch"
       >
         <div className="flex flex-row items-center justify-between w-full gap-2 sm:gap-4">
