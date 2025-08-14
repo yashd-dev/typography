@@ -66,9 +66,18 @@ export default function StyleShowcase() {
   };
 
   return (
-    <main className="p-4 sm:p-6 md:p-16 space-y-12 md:space-y-16">
+    <main className="p-4 sm:p-6 md:px-16 space-y-12 md:space-y-16">
       <div className="min-h-screen flex flex-col justify-around">
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] tracking-tight leading-[1.05] font-semibold break-words">
+        <header className="pb-5 w-full flex flex-row justify-between items-center">
+          <img src="/logo.svg" alt="Logo" className="size-20" />
+
+          <h3 className="text-zinc-400 text-sm sm:text-base font-mono">
+            made with love by <a className="text-teal-500 font-bold underline" href="https://yashd.in" target="_blank">yashd</a>
+          </h3>
+        </header>
+        <hr className="opacity-30 border-zinc-500" />
+
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[8rem] tracking-tight leading-[1.05] font-semibold break-words py-10">
           Better Typography{" "}
           <span className="text-yellow-400">Starts Here.</span>
         </h1>
@@ -83,22 +92,23 @@ export default function StyleShowcase() {
 
           <p className="md:col-span-1 md:order-first">
             Typography is the art and craft of arranging type to make written
-            language not just legible, but also visually engaging. It&apos;s one of
-            the core pillars of design, whether you&apos;re building a website,
-            designing an app, or creating for print. Like it or not, typography
-            shapes the entire look and feel of a project. Sometimes, it even
-            steals the spotlight and becomes the main attraction.
+            language not just legible, but also visually engaging. It&apos;s one
+            of the core pillars of design, whether you&apos;re building a
+            website, designing an app, or creating for print. Like it or not,
+            typography shapes the entire look and feel of a project. Sometimes,
+            it even steals the spotlight and becomes the main attraction.
           </p>
           <p className="md:col-span-1">
-            I&apos;ve put together a set of ready-to-use typography snippets you can
-            simply copy, paste, and drop into your projects.
+            I&apos;ve put together a set of ready-to-use typography snippets you
+            can simply copy, paste, and drop into your projects.
           </p>
         </div>
       </div>
       <hr className="opacity-30 border-zinc-800" />
 
-      <div className="w-full flex flex-col sm:flex-row flex-wrap justify-between items-start gap-4 max-w-full px-2 sm:px-4 md:px-10"
-      id="switch"
+      <div
+        className="w-full flex flex-col sm:flex-row flex-wrap justify-between items-start gap-4 max-w-full px-2 sm:px-4 md:px-10"
+        id="switch"
       >
         <div className="flex flex-wrap items-center gap-2 sm:gap-4">
           <Select
