@@ -210,7 +210,7 @@ export default function StyleShowcase() {
               "NotesPortal",
             ],
           ].map(([label, desc, styleKey, content], idx) => (
-            <div key={idx} className="w-full flex flex-col justify-between pb-4 border-b">
+            <div key={idx} className="w-full flex flex-col justify-between pb-4 border-b md:border-0">
               <div className="w-full flex flex-wrap justify-between items-center text-stone-400/40 font-mono text-xs uppercase tracking-[0.2em] mb-4 gap-2">
                 <div className="flex flex-wrap items-center gap-2 max-w-full">
                   <h4 className="whitespace-nowrap ">{label}</h4>{" "}
