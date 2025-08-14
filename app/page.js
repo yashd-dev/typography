@@ -67,12 +67,19 @@ export default function StyleShowcase() {
 
   return (
     <main className="p-4 sm:p-6 md:px-16 space-y-12 md:space-y-16">
-      <div className="min-h-screen flex flex-col justify-around">
+      <div className="py-10 md:py-0 md:min-h-screen flex flex-col justify-center md:justify-around">
         <header className="pb-5 w-full flex flex-row justify-between items-center">
           <img src="/logo.svg" alt="Logo" className="size-20" />
 
           <h3 className="text-zinc-400 text-sm sm:text-base font-mono">
-            made with love by <a className="text-teal-500 font-bold underline" href="https://yashd.in" target="_blank">yashd</a>
+            made with love by{" "}
+            <a
+              className="text-teal-500 font-bold underline"
+              href="https://yashd.in"
+              target="_blank"
+            >
+              yashd
+            </a>
           </h3>
         </header>
         <hr className="opacity-30 border-zinc-500" />
@@ -104,13 +111,13 @@ export default function StyleShowcase() {
           </p>
         </div>
       </div>
-      <hr className="opacity-30 border-zinc-800" />
+      <hr className="opacity-30 border-zinc-800 hidden md:block" />
 
       <div
-        className="w-full flex flex-col sm:flex-row flex-wrap justify-between items-start gap-4 max-w-full px-2 sm:px-4 md:px-10"
+        className="w-full flex flex-row  justify-between items-start gap-4 max-w-full px-2 sm:px-4 md:px-10"
         id="switch"
       >
-        <div className="flex flex-wrap items-center gap-2 sm:gap-4">
+        <div className="flex flex-row items-center justify-between w-full gap-2 sm:gap-4">
           <Select
             onValueChange={handleStyleChange}
             defaultValue={currentStyleKey}
@@ -203,11 +210,10 @@ export default function StyleShowcase() {
               "NotesPortal",
             ],
           ].map(([label, desc, styleKey, content], idx) => (
-            <div key={idx} className="w-full flex flex-col justify-between">
-              <div className="w-full flex flex-wrap justify-between items-center text-teal-100/40 font-mono text-xs uppercase tracking-[0.2em] mb-4 gap-2">
-                <h4 className="whitespace-nowrap ">{label}</h4>
+            <div key={idx} className="w-full flex flex-col justify-between pb-4 border-b">
+              <div className="w-full flex flex-wrap justify-between items-center text-stone-400/40 font-mono text-xs uppercase tracking-[0.2em] mb-4 gap-2">
                 <div className="flex flex-wrap items-center gap-2 max-w-full">
-                  <h4 className="whitespace-normal">{desc}</h4>
+                  <h4 className="whitespace-nowrap ">{label}</h4>{" "}
                   <Button
                     variant="ghost"
                     size="icon"
@@ -217,6 +223,8 @@ export default function StyleShowcase() {
                     <CopyIcon className="h-4 w-4" />
                   </Button>
                 </div>
+
+                <h4 className="whitespace-normal italic">{desc}</h4>
               </div>
               {styleKey.startsWith("p") ||
               styleKey.includes("label") ||
