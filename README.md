@@ -2,7 +2,7 @@
 
 <br/>
 
-> A simple way to preview, copy, and use typography styles — built to save myself (and hopefully you) from decision fatigue when picking fonts.
+> A simple way to preview, copy, and use typography styles —built to save myself (and hopefully you) from decision fatigue when picking font sizes and the whole mobile responsiveness.
 
 ## Usage
 
