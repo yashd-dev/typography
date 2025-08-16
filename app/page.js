@@ -114,7 +114,7 @@ export default function StyleShowcase() {
       <hr className="opacity-30 border-zinc-800 hidden md:block" />
 
       <div
-        className="w-full flex flex-row  justify-between items-start gap-4 max-w-full sm:px-4 md:px-10"
+        className="w-full flex flex-col  justify-between items-start gap-10 max-w-full sm:px-4 md:px-10"
         id="switch"
       >
         <div className="flex flex-row items-center justify-between w-full gap-2 sm:gap-4">
@@ -150,6 +150,20 @@ export default function StyleShowcase() {
             </span>
           </Toggle>
         </div>
+
+        {styles[currentStyleKey].example && (
+          <div className="text-zinc-100">
+            Example Implementation:{" "}
+            <a
+              href={styles[currentStyleKey].example}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-medium"
+            >
+              {styles[currentStyleKey].example}
+            </a>
+          </div>
+        )}
       </div>
 
       <section className="min-h-screen w-full px-2 sm:px-4 md:px-10 pt-16 overflow-hidden">
@@ -210,7 +224,10 @@ export default function StyleShowcase() {
               "NotesPortal",
             ],
           ].map(([label, desc, styleKey, content], idx) => (
-            <div key={idx} className="w-full flex flex-col justify-between pb-4 border-b md:border-0">
+            <div
+              key={idx}
+              className="w-full flex flex-col justify-between pb-4 border-b md:border-0"
+            >
               <div className="w-full flex flex-wrap justify-between items-center text-stone-400/40 font-mono text-xs uppercase tracking-[0.2em] mb-4 gap-2">
                 <div className="flex flex-wrap items-center gap-2 max-w-full">
                   <h4 className="whitespace-nowrap ">{label}</h4>{" "}
